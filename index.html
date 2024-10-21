@@ -1,163 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Shoe store</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAADCCAMAAAB6zFdcAAAAhFBMVEX////u7u4AAADt7e3z8/P6+vrx8fH8/Pz39/fi4uLV1dXm5ua5ubnq6upDQ0OsrKzLy8sTExNcXFzc3NyEhITPz8+cnJweHh57e3ssLCxKSkp0dHQkJCQYGBjW1tZjY2OOjo7CwsI0NDRfX1+ysrKBgYFtbW09PT1VVVWkpKSUlJQiIiKix5GDAAAJVklEQVR4nO2daXuiMBCAAwQSFAUFqUdbxVqr7v//fwuoJEog3GA782mfbMoMbw5mcowIJUI05SYaZaVYSUoJK02qKpgVUvYAnZUqTEroYoVSXZxZTJXBCnWhLkNkFjAABsAAGAADYAAMgEFRBkJlrLBRBqxUxCBDl9AsOQOGFpFEdCMRykopK2WFhBViYVWdlWLRA8S6hFWJsKpYl8wssS6kJWLwlBPhW5SV8i2ayEOLCqpyuh5aNBG+VyeFXO/RhbqMurrEQ0jcq4VDqPWR/cCgsC5SQhcwAAbAABgAA2AADJ4YlPCRhM7IQH0kziy5j0RBkBBdiRYt4WE/jKBWeo/QrDIeNsTOwAAYAANgAAyAATBIM/hFPlIpDxsz0ROhrJCy0hJVqaiqLqvapS6uKus+mjxuFC3/t7RToNxLNWncKDMLYmdYPwAGwAAYAANgAAzKM6jk9ba/rlzR662kixPC0AspK8Jm4jWwUlnv0WW6hGaJdUljpuK6qp3FaTZurOthM7MgdgYGwAAYAANgAAzaZPC3/ANW+sf8RIgXIG6swsBQJq/M4F5ch4GGbPOFGSgE12dADj59XQZkbAVGTQaafviJdb4ig3Hgn7xR3X6gkYXqxP/3QgyuVReXzfvUMu9DoTIDhSjq9/Xhr8Eg/N5TqhsTZ66qq+O4ie8CUdYfC/pk12AZhI5BaPvC8taqqk7tSbauMvvO5EfdEiHwtF11vd66+87IIIiMNqd3NSLgKHm6ip8/IPpJVRfkBc4fRK83HtknNZa9Fw4Cknv+4LH75Hi92FPVddKiVTzsTs6hRHUmfjwAYgK2y9WteVYXXcInOokyycjuKXaOJkD7a/VxA/A2X5AG1w+QHY2r8bAZjC1/qiay2i3i0oYYaGg0C5+6K2xXDwwm/hcHQJ0d7g3WDAMNfUYIZu7gGISTTPj32iiYq7y8bQNWtRkGeLyP55didnXGQIvXT9zz7qQ+ynKkc5NEIwwMfIwfvRkSAwVjRA3ne//2BGC/M0KPuOH1RAN516dPBsQgHP/OeaumZGmR2I6GGSDr9nzOsL4ZjPztepYm4I3CvhHXb/asLg1uyo5caY8+kuEu5um3D2V+5kwodZ9Jfu3r56bj3PMduMipHVuXLyEAdWMRUvHBshbFaHPXYnHt3EiLpnpP/v1GqnnTlRjAx7ep60bl+41sWAjjRv2czLeuePm/5dj5ysB0gqX49aNB4I9DhVpL68oaGSUzz3TcC4NwABiX5TQTgDp3cOIxtcBA0zHrfNtu9xfCQRAGyNjMaf+oYZaU23JqpR8gzoBjpwyMeALcZUyAN1mfJ1m6mmLAPIPuGVDzctrnAlCnLs7W1RADDU/4abg7BsYo8PJfX1V/PDNXV0MMuM9iJwyu3ytiefN3GYG3synR1RADYj3obZNB9BUPJ7eJ4wkc4Gd5PzqE6BJdzZzVNZT1g+o5aS8HBA0DHed8fA4BRfKxG6HQHWp07z0zhxnyH5XvXa5uc/nSok0AZBy20yIA1P1hcjW50Xxpou4TUzafu+CCp5xUrR43XgeAMXJyPQBOZsdApKt+3rxMBsdnE2wRgxqxc6TksBPHgCK5LHShrvbOZDkfzzYsGzyThQjVzPNPSkemTG0d8ZlLumBAU91AVbnn1mRAA3tbaPzfZGPhyHvu+Gze82wQicPqVmGQRMGH7Vrw9Gzx4sA4U1drDERuyqoOA00JuzJxne9/pd4/DIwxytfVFgNRN1BVqzqDsBq2dssyAyCSo0O5PewuGRiPXnIi08RDLcMAY51g9zyVesDPsvIMUkBXOwywuxdbNa/AgCijw3fG8/JkbuNiutrJAUH8LMP8W91Jlod9E8bAWa4zFgHzCYySFy7h9bLCUqdb2T/Z29Ds7/bu+scicg/xAqaUmAvxkJLKdIcRva+qlngbbhOo9lldN8e+JSUZARpvFzIDv/QEeJNTtGOsaIKu2uVZ3VwH/uQSnB87U3yevxcIgkXytv2kj2b1w4BIBvDFJCllSf9cWJeKrx/K1DdTZvXDIJC9xM/SfVYWP1LzvW1JF4iXvTUWmNUPg10Rg0+Ba06ijSpKlcnYXQS7isP/JqvtCAnN6oWBKFwSy3Sz2ew2m9NPafcnRcB3wzeURZvdMTCrfM9rydoyos2yAd3hWHQL4N/SCX1JTcny+LpkkPhIdpcEPs5u5A6l7CrDgJWKGBTIEZVahkwvorUms5NDELeUK1sdbemXKxCP7uo9157gihLYBYgYNVbkG4sXnruPhjpCcBnrNOzGA7znqlHSBYCjfR/Hg2Qwbp/AzqH6fSYbIgM9L2hsQqYeHfid77YZbA400TVYBhS3SODb1DldQ2WgGK3NiWsfP+kaLIOWvo3roFR++94YXD2GnHNwVWW1cfVQa0rX8ypkcz5SvbO6SHoWqKycouNjtY7ptisCdE6zBKLAuHyL9vx7bea+OQDv32Perioju5f1A1JxVyAtb+dPxC+4vw4DZMnfroB8zB2s4/7vvVfcXyh3PEAoe8+9ZrR5VQa1Z8V/dhgYa9orM8jfaJLJarvgXJCXZeBWX1p+86N9Asnd/1dggA5V+8DByLZrsAyE7iVBdoVNw2iV/G5XXb+lUx9JnKKhwgr7zHcRFaRoqJPNocXMEVxVjsZTLGcVP0CpqtNtlGyCJfB4uN94L+wwb15DZ3XRZ1E34d2znjOu/Jr8ibSI0zz7Wtyt+I0Mwm+kl7vhsvryDtwDfieDcEDY+wwAPzvLxUgXn6P+VQzC4sllvn5X79/K2Wy/nn/5Y50gYhgFsir9AgY4zgs6sgLbts+2fbCC6MgQ0RXlGg8MJh9Kmwxi9+m65sTZldT9EwyYXX8it7DIE23w99oGm4mW4XjIuJKINKcsKxS2aMWMxOIWlekSmiXWVTuvbgd580QvVi2HZM1771kMXiF/YnFdwAAYAANgAAyAQX0Gv9Y/+Lt+Io/ur8YLvF2SnvYn4kZgAAyAATAABsAAGBRZW89lUGCP5V463H3nEhv9rZ8J6Ov8wUC93p7P6iKInYEBMAAGwAAYAIM/zqCEj9ReXt2efaSe75QNQTga0haVXSQcxO+1pc2CdWVYPwAGwAAYAANgAAzqMajitwzURyrlYVf72QZZDjMqqlrmlys6zZfGul+B33sXdNUBnMWRmAWxM6wfAANgAAyAATAABsCgAoP/wL5P7/B3lmYAAAAASUVORK5CYII=" type="image/x-icon">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <nav>
-            <div class="navTop">
-                <div class="nav-item">
-                    <img
-                        src="img/sneakers.png"
-                        alt>
-                </div>
-                <div class="nav-item">
-                    
-                </div>
-                <div class="nav-item">
-                    <span class="limitedOffer"> Limited Offer...!</span>
-                </div>
-            </div>
-            <div class="navBottom">
-                <h3 class="menuItem">AIR FORCE</h3>
-                <h3 class="menuItem">JORDAN</h3>
-                <h3 class="menuItem">BLEZER</h3>
-                <h3 class="menuItem">CRATER</h3>
-                <h3 class="menuItem">HIPPIE</h3>
-            </div>
-        </nav>
-        <div class="slider">
-            <div class="sliderwrapper">
-                <div class="sliderItem">
-                    <img src="img/air.png" alt class="sliderImg">
-                    <div class="sliderBg"></div>
-                    <h1 class="sliderTitle">AIR FORCE <br> NEW <br> SEASON</h1>
-                    <h2 class="sliderPrice">Rs 9,950</h2>
-                    <a href="#product">
-                        <div data-tooltip="Rs 9,950" class="button">
-                            <div class="button-wrapper">
-                              <div class="text">Buy Now</div>
-                                <span class="icon">
-                                  <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                            </svg>
-                                </span>
-                              </div>
-                            </div>
-                    </a>
-                </div>
-                <div class="sliderItem">
-                    <img src="img/jordan.png" alt class="sliderImg">
-                    <div class="sliderBg"></div>
-                    <h1 class="sliderTitle">JORDAN <br> NEW <br> SEASON</h1>
-                    <h2 class="sliderPrice">Rs 12,459</h2>
-                    <a href="#product"> <div data-tooltip="Rs 12,459" class="button">
-                        <div class="button-wrapper">
-                          <div class="text">Buy Now</div>
-                            <span class="icon">
-                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                        </svg>
-                            </span>
-                          </div>
-                        </div></a>
-                </div>
-                <div class="sliderItem">
-                    <img src="img/blazer.png" alt class="sliderImg">
-                    <div class="sliderBg"></div>
-                    <h1 class="sliderTitle">BLEZER <br> NEW <br> SEASON</h1>
-                    <h2 class="sliderPrice">Rs 8,100</h2>
-                    <a href="#product"> <div data-tooltip="Price:-Rs 8,100" class="button">
-                        <div class="button-wrapper">
-                          <div class="text">Buy Now</div>
-                            <span class="icon">
-                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                        </svg>
-                            </span>
-                          </div>
-                        </div></a>
-                </div>
-                <div class="sliderItem">
-                    <img src="img/crater.png" alt class="sliderImg">
-                    <div class="sliderBg"></div>
-                    <h1 class="sliderTitle">CRATER <br> NEW <br> SEASON</h1>
-                    <h2 class="sliderPrice">Rs 10,788</h2>
-                   <a href="#product"> <div data-tooltip="Price:-Rs 10,788" class="button">
-                    <div class="button-wrapper">
-                      <div class="text">Buy Now</div>
-                        <span class="icon">
-                          <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                    </svg>
-                        </span>
-                      </div>
-                    </div></a>
-                </div>
-                <div class="sliderItem">
-                    <img src="img/hippie.png" alt class="sliderImg">
-                    <div class="sliderBg"></div>
-                    <h1 class="sliderTitle">HIPPIE <br> NEW <br> SEASON</h1>
-                    <h2 class="sliderPrice">Rs 8,279</h2>
-                    <a href="#product"> <div data-tooltip="Price:-Rs 8,279" class="button">
-                        <div class="button-wrapper">
-                          <div class="text">Buy Now</div>
-                            <span class="icon">
-                              <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
-                        </svg>
-                            </span>
-                          </div>
-                        </div></a>
-                </div>
-            </div>
-        </div>
-        <div class="features">
-            <div class="feature">
-                <img class="featureIcon" src="img/shipping.png" alt
-                    class="featureImg">
-                <span class="featureTitle">FREE SHIPPING</span>
-                <span class="featureDesc">FREE WORLDWIDE SHIPPING ON ALL THE
-                    ORDERS.</span>
-            </div>
 
-            <div class="feature">
-                <img class="featureIcon" src="./img/return.png" alt>
-                <span class="featureTitle">30 DAYS RETURN</span>
-                <span class="featureDesc">No question return and easy refund in
-                    14 days.</span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon"
+        href="data:image/png;base64,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"
+        type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="navTop">
+            <div class="nav-item">
+                <img src="img/sneakers.png" alt>
             </div>
-            <div class="feature">
-                <img class="featureIcon" src="./img/gift.png" alt>
-                <span class="featureTitle">GIFT CARDS</span>
-                <span class="featureDesc">Buy gift cards and use coupon codes
-                    easily.</span>
+            <div class="nav-item">
+
             </div>
-            <div class="feature">
-                <img class="featureIcon" src="./img/contact.png" alt>
-                <span class="featureTitle">CONTACT US!</span>
-                <span class="featureDesc">Keep in touch via email and support
-                    system.</span>
+            <div class="nav-item">
+                <span class="limitedOffer"> Limited Offer...!</span>
             </div>
         </div>
-        <div class="product" id="product">
-            <img src="img/air.png" alt="" class="productImg">
-            <div class="productdetails">
-                <h1 class="productitle">AIR FORCE</h1>
-                <h2 class="producPrice">Rs 9,950</h2>
-                <p class="productDesc">Nike Air Force is a range of athletic shoes made by Nike. It was created by designer Bruce Kilgore and was the first basketball shoe to use Nike's "Air" technology. The shoe is offered in low-, mid- and high-top styles.</p>
-            
-                <div class="colors">
-                    <div class="color"></div>
-                    <div class="color"></div>
-                </div>
+        <div class="navBottom">
+            <h3 class="menuItem">AIR FORCE</h3>
+            <h3 class="menuItem">JORDAN</h3>
+            <h3 class="menuItem">BLEZER</h3>
+            <h3 class="menuItem">CRATER</h3>
+            <h3 class="menuItem">HIPPIE</h3>
+        </div>
+    </nav>
+    <div class="slider">
+        <div class="sliderwrapper">
+            <div class="sliderItem">
+                <img src="img/air.png" alt class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">AIR FORCE <br> NEW <br> SEASON</h1>
+                <h2 class="sliderPrice">Rs 9,950</h2>
+                <a href="#product">
+                    <div data-tooltip="Rs 9,950" class="button">
+                        <div class="button-wrapper">
+                            <div class="text">Buy Now</div>
+                            <span class="icon">
+                                <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="img/jordan.png" alt class="sliderImg">
+                <h1 class="sliderTitle">JORDAN <br> NEW <br> SEASON</h1>
+                <h2 class="sliderPrice">Rs 12,459</h2>
+                <a href="#product">
+                    <div data-tooltip="Rs 12,459" class="button">
+                        <div class="button-wrapper">
+                            <div class="text">Buy Now</div>
+                            <span class="icon">
+                                <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="img/blazer.png" alt class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">BLEZER <br> NEW <br> SEASON</h1>
+                <h2 class="sliderPrice">Rs 8,100</h2>
+                <a href="#product">
+                    <div data-tooltip="Price:-Rs 8,100" class="button">
+                        <div class="button-wrapper">
+                            <div class="text">Buy Now</div>
+                            <span class="icon">
+                                <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="img/crater.png" alt class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">CRATER <br> NEW <br> SEASON</h1>
+                <h2 class="sliderPrice">Rs 10,788</h2>
+                <a href="#product">
+                    <div data-tooltip="Price:-Rs 10,788" class="button">
+                        <div class="button-wrapper">
+                            <div class="text">Buy Now</div>
+                            <span class="icon">
+                                <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="img/hippie.png" alt class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">HIPPIE <br> NEW <br> SEASON</h1>
+                <h2 class="sliderPrice">Rs 8,279</h2>
+                <a href="#product">
+                    <div data-tooltip="Price:-Rs 8,279" class="button">
+                        <div class="button-wrapper">
+                            <div class="text">Buy Now</div>
+                            <span class="icon">
+                                <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="features">
+        <div class="feature">
+            <img class="featureIcon" src="img/shipping.png" alt class="featureImg">
+            <span class="featureTitle">FREE SHIPPING</span>
+            <span class="featureDesc">FREE WORLDWIDE SHIPPING ON ALL THE
+                ORDERS.</span>
+        </div>
+
+        <div class="feature">
+            <img class="featureIcon" src="./img/return.png" alt>
+            <span class="featureTitle">30 DAYS RETURN</span>
+            <span class="featureDesc">No question return and easy refund in
+                14 days.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/gift.png" alt>
+            <span class="featureTitle">GIFT CARDS</span>
+            <span class="featureDesc">Buy gift cards and use coupon codes
+                easily.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/contact.png" alt>
+            <span class="featureTitle">CONTACT US!</span>
+            <span class="featureDesc">Keep in touch via email and support
+                system.</span>
+        </div>
+    </div>
+    <div class="product" id="product">
+        <img src="img/air.png" alt="" class="productImg">
+        <div class="productdetails">
+            <h1 class="productitle">AIR FORCE</h1>
+            <h2 class="producPrice">Rs 9,950</h2>
+            <p class="productDesc">Nike Air Force is a range of athletic shoes made by Nike. It was created by designer
+                Bruce Kilgore and was the first basketball shoe to use Nike's "Air" technology. The shoe is offered in
+                low-, mid- and high-top styles.</p>
+
+            <div class="colors">
+                <div class="color"></div>
+                <div class="color"></div>
+            </div>
             <div class="sizes">
                 <div class="size">41</div>
                 <div class="size">42</div>
@@ -165,18 +192,18 @@
             </div>
             <button class="productbutton">
                 <span>
-                  BUY
+                    BUY
                 </span>
-              </button>
+            </button>
         </div>
         <div class="payment">
             <h1 class="payTitle">Personal Information</h1>
             <label>Name and Surname</label>
-            <input type="text" placeholder="Enter your name" class="payInput">
+            <input type="text" placeholder="Enter your name" class="payInput" required>
             <label>Phone Number</label>
-            <input type="number" placeholder="entyer your name" class="payInput">
+            <input type="text" placeholder="entyer your name" class="payInput" required>
             <label>Address</label>
-            <input type="text" placeholder="enter your address" class="payInput">
+            <input type="text" placeholder="enter your address" class="payInput" required>
             <h1 class="payTitle">Card Information</h1>
             <div class="cardIcons">
                 <img src="img/visa.png" alt="" width="40" class="cardIcon">
@@ -184,10 +211,10 @@
             </div>
             <input type="password" placeholder="card number" class="payInput">
             <div class="cardInfo">
-                <input type="password" placeholder="mm" class="payInput sm" required>
-                <input type="password" placeholder="yyy" class="payInput sm" required>
-                <input type="password" placeholder="cvv" class="payInput sm" required>
-                
+                <input id="pass" type="password" placeholder="mm" class="payInput sm" required>
+                <input  id="pass" type="password" placeholder="yyy" class="payInput sm" required>
+                <input id="pass" type="password" placeholder="cvv" class="payInput sm" required>
+
             </div>
             <button class="payButton" type="submit">Chrckout</button>
             <span class="close">X</span>
@@ -196,25 +223,25 @@
     <div class="gallery">
         <div class="galleryItem">
             <h1 class="galleryTitle">Be Yourself!</h1>
-            <img src="https://images.pexels.com/photos/9295809/pexels-photo-9295809.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            <img src="img/sp.avif"
                 alt="" class="galleryImg">
             </h1>
         </div>
         <div class="galleryItem">
-            <img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            <img src="https://cdn.pixabay.com/photo/2020/05/03/19/09/nike-5126389_640.jpg"
                 alt="" class="galleryImg">
             <h1 class="galleryTitle">This is the First Day of Your New Life</h1>
         </div>
         <div class="galleryItem">
-            <h1 class="galleryTitle">Just Do it!</h1>
-            <img src="https://images.pexels.com/photos/7856965/pexels-photo-7856965.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            <h1 class="galleryTitle">Win  on Air!</h1>
+            <img src="https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/f119a49a-10e3-4325-bffc-f4c6307d97e4/NIKE+QUEST+5.png"
                 alt="" class="galleryImg">
         </div>
     </div>
     <div class="newSeason">
         <div class="nsItem">
-            <img src="https://images.pexels.com/photos/4753986/pexels-photo-4753986.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-            alt="" class="nsImg">
+            <img src="https://c4.wallpaperflare.com/wallpaper/632/653/239/advertising-logo-nike-poster-wallpaper-preview.jpg"
+                alt="" class="nsImg">
         </div>
         <div class="nsItem">
             <h3 class="nsTitleSm">WINTER NEW ARRIVALS</h3>
@@ -225,7 +252,7 @@
             </a>
         </div>
         <div class="nsItem">
-            <img src="https://images.pexels.com/photos/7856965/pexels-photo-7856965.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            <img src="https://c.pxhere.com/photos/64/c7/person_jumping_shoes_red_nike_city_young_fun-734362.jpg!s2"
                 alt="" class="nsImg">
         </div>
     </div>
@@ -266,37 +293,28 @@
             <div class="footerRightMenu">
                 <h1 class="fMenuTitle">Subcribe to our newletters</h1>
                 <div class="fMail">
-<div class="input-wrapper">
-  <svg class="icoN" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <g data-name="Layer 2">
-      <g data-name="inbox">
-        <rect
-          width="24"
-          height="24"
-          transform="rotate(180 12 12)"
-          opacity="0"
-        ></rect>
-        <path
-          d="M20.79 11.34l-3.34-6.68A3 3 0 0 0 14.76 3H9.24a3 3 0 0 0-2.69 1.66l-3.34 6.68a2 2 0 0 0-.21.9V18a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-5.76a2 2 0 0 0-.21-.9zM8.34 5.55a1 1 0 0 1 .9-.55h5.52a1 1 0 0 1 .9.55L18.38 11H16a1 1 0 0 0-1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2a1 1 0 0 0-1-1H5.62z"
-        ></path>
-      </g>
-    </g>
-  </svg>
-  <input type="text" name="text" class="input" placeholder="your@gmail.com" required />
-  <button class="Subscribe-btn">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="30"
-      height="10"
-      viewBox="0 0 38 15"
-      class="arrow"
-    >
-      <path
-        d="M10 7.519l-.939-.344h0l.939.344zm14.386-1.205l-.981-.192.981.192zm1.276 5.509l.537.843.148-.094.107-.139-.792-.611zm4.819-4.304l-.385-.923h0l.385.923zm7.227.707a1 1 0 0 0 0-1.414L31.343.448a1 1 0 0 0-1.414 0 1 1 0 0 0 0 1.414l5.657 5.657-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364zM1 7.519l.554.833.029-.019.094-.061.361-.23 1.277-.77c1.054-.609 2.397-1.32 3.629-1.787.617-.234 1.17-.392 1.623-.455.477-.066.707-.008.788.034.025.013.031.021.039.034a.56.56 0 0 1 .058.235c.029.327-.047.906-.39 1.842l1.878.689c.383-1.044.571-1.949.505-2.705-.072-.815-.45-1.493-1.16-1.865-.627-.329-1.358-.332-1.993-.244-.659.092-1.367.305-2.056.566-1.381.523-2.833 1.297-3.921 1.925l-1.341.808-.385.245-.104.068-.028.018c-.011.007-.011.007.543.84zm8.061-.344c-.198.54-.328 1.038-.36 1.484-.032.441.024.94.325 1.364.319.45.786.64 1.21.697.403.054.824-.001 1.21-.09.775-.179 1.694-.566 2.633-1.014l3.023-1.554c2.115-1.122 4.107-2.168 5.476-2.524.329-.086.573-.117.742-.115s.195.038.161.014c-.15-.105.085-.139-.076.685l1.963.384c.192-.98.152-2.083-.74-2.707-.405-.283-.868-.37-1.28-.376s-.849.069-1.274.179c-1.65.43-3.888 1.621-5.909 2.693l-2.948 1.517c-.92.439-1.673.743-2.221.87-.276.064-.429.065-.492.057-.043-.006.066.003.155.127.07.099.024.131.038-.063.014-.187.078-.49.243-.94l-1.878-.689zm14.343-1.053c-.361 1.844-.474 3.185-.413 4.161.059.95.294 1.72.811 2.215.567.544 1.242.546 1.664.459a2.34 2.34 0 0 0 .502-.167l.15-.076.049-.028.018-.011c.013-.008.013-.008-.524-.852l-.536-.844.019-.012c-.038.018-.064.027-.084.032-.037.008.053-.013.125.056.021.02-.151-.135-.198-.895-.046-.734.034-1.887.38-3.652l-1.963-.384zm2.257 5.701l.791.611.024-.031.08-.101.311-.377 1.093-1.213c.922-.954 2.005-1.894 2.904-2.27l-.771-1.846c-1.31.547-2.637 1.758-3.572 2.725l-1.184 1.314-.341.414-.093.117-.025.032c-.01.013-.01.013.781.624zm5.204-3.381c.989-.413 1.791-.42 2.697-.307.871.108 2.083.385 3.437.385v-2c-1.197 0-2.041-.226-3.19-.369-1.114-.139-2.297-.146-3.715.447l.771 1.846z"
-      ></path></svg>
-    Join
-  </button>
-</div>
+                    <div class="input-wrapper">
+                        <svg class="icoN" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <g data-name="Layer 2">
+                                <g data-name="inbox">
+                                    <rect width="24" height="24" transform="rotate(180 12 12)" opacity="0"></rect>
+                                    <path
+                                        d="M20.79 11.34l-3.34-6.68A3 3 0 0 0 14.76 3H9.24a3 3 0 0 0-2.69 1.66l-3.34 6.68a2 2 0 0 0-.21.9V18a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-5.76a2 2 0 0 0-.21-.9zM8.34 5.55a1 1 0 0 1 .9-.55h5.52a1 1 0 0 1 .9.55L18.38 11H16a1 1 0 0 0-1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2a1 1 0 0 0-1-1H5.62z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                        <input type="text" name="text" class="input" placeholder="your@gmail.com" required />
+                        <button class="Subscribe-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 38 15"
+                                class="arrow">
+                                <path
+                                    d="M10 7.519l-.939-.344h0l.939.344zm14.386-1.205l-.981-.192.981.192zm1.276 5.509l.537.843.148-.094.107-.139-.792-.611zm4.819-4.304l-.385-.923h0l.385.923zm7.227.707a1 1 0 0 0 0-1.414L31.343.448a1 1 0 0 0-1.414 0 1 1 0 0 0 0 1.414l5.657 5.657-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364zM1 7.519l.554.833.029-.019.094-.061.361-.23 1.277-.77c1.054-.609 2.397-1.32 3.629-1.787.617-.234 1.17-.392 1.623-.455.477-.066.707-.008.788.034.025.013.031.021.039.034a.56.56 0 0 1 .058.235c.029.327-.047.906-.39 1.842l1.878.689c.383-1.044.571-1.949.505-2.705-.072-.815-.45-1.493-1.16-1.865-.627-.329-1.358-.332-1.993-.244-.659.092-1.367.305-2.056.566-1.381.523-2.833 1.297-3.921 1.925l-1.341.808-.385.245-.104.068-.028.018c-.011.007-.011.007.543.84zm8.061-.344c-.198.54-.328 1.038-.36 1.484-.032.441.024.94.325 1.364.319.45.786.64 1.21.697.403.054.824-.001 1.21-.09.775-.179 1.694-.566 2.633-1.014l3.023-1.554c2.115-1.122 4.107-2.168 5.476-2.524.329-.086.573-.117.742-.115s.195.038.161.014c-.15-.105.085-.139-.076.685l1.963.384c.192-.98.152-2.083-.74-2.707-.405-.283-.868-.37-1.28-.376s-.849.069-1.274.179c-1.65.43-3.888 1.621-5.909 2.693l-2.948 1.517c-.92.439-1.673.743-2.221.87-.276.064-.429.065-.492.057-.043-.006.066.003.155.127.07.099.024.131.038-.063.014-.187.078-.49.243-.94l-1.878-.689zm14.343-1.053c-.361 1.844-.474 3.185-.413 4.161.059.95.294 1.72.811 2.215.567.544 1.242.546 1.664.459a2.34 2.34 0 0 0 .502-.167l.15-.076.049-.028.018-.011c.013-.008.013-.008-.524-.852l-.536-.844.019-.012c-.038.018-.064.027-.084.032-.037.008.053-.013.125.056.021.02-.151-.135-.198-.895-.046-.734.034-1.887.38-3.652l-1.963-.384zm2.257 5.701l.791.611.024-.031.08-.101.311-.377 1.093-1.213c.922-.954 2.005-1.894 2.904-2.27l-.771-1.846c-1.31.547-2.637 1.758-3.572 2.725l-1.184 1.314-.341.414-.093.117-.025.032c-.01.013-.01.013.781.624zm5.204-3.381c.989-.413 1.791-.42 2.697-.307.871.108 2.083.385 3.437.385v-2c-1.197 0-2.041-.226-3.19-.369-1.114-.139-2.297-.146-3.715.447l.771 1.846z">
+                                </path>
+                            </svg>
+                            Join
+                        </button>
+                    </div>
 
                 </div>
             </div>
@@ -310,10 +328,11 @@
                 </div>
             </div>
             <div class="fotterRightMenu">
-                <span class="copyright"> All rights reserved. 2022.</span>
+                <span class="copyright"> All rights reserved. 2024.</span>
             </div>
         </div>
     </footer>
-        <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+</body>
+
 </html>
