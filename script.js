@@ -94,19 +94,16 @@ const currentProductDes = document.querySelector(".productDesc")
 
 menuItems.forEach((item, index) => {
     item.addEventListener("click", () => {
-        // change the current slide
         wrapper.style.transform = `translateX(${-100 * index}vw)`
 
-        // chanhge the choosen product
+
         choosenProduct = products[index]
 
-        //change the text of currentProduct
         currentproductitle.textContent = choosenProduct.title;
         currentproductPrice.textContent = choosenProduct.price;
         currentProductDes.textContent = choosenProduct.desc;
         currentProductIMG.src = choosenProduct.colors[0].img;
 
-        // assining colors
         currentProductColors.forEach((color, index) => {
             color.style.backgroundColor = choosenProduct.colors[index].code;
         })
@@ -137,6 +134,7 @@ const close = document.querySelector(".close");
 const submit = document.querySelector(".payButton")
 const allInput = document.getElementsByTagName("input")
 
+payment.style.display="none"
 productButton.addEventListener("click", () => {
     payment.style.display = "flex"
 })
